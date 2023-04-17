@@ -1,7 +1,6 @@
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import {styles} from "./style/Styles";
 import Botao from "./components/Botao";
-import './components/Global';
 import {useState} from "react";
 
 export default function App() {
