@@ -12,7 +12,7 @@ let flag_operator = true;
 let eq = '';
 
 
-export default Botao = ({label, setEquation}) =>{
+export default Botao = ({label, setEquation, variant="default", Tvariant = 'default'}) =>{
 
     function absorv(label ,setEquation){
         if (eq === '' && label === '0')  eq = eq + '0';
@@ -31,8 +31,8 @@ export default Botao = ({label, setEquation}) =>{
     }
 
     return(
-        <TouchableOpacity style={label === "0" ? styles.botao_0 : styles.botao } onPress={()=> absorv(label,setEquation)}>
-            <Text style={label === 'AC' ? styles.texto_AC : styles.texto}>
+        <TouchableOpacity style={variant === 'default'? styles.botao : variant === '0'? styles.botao_0: variant==='secondary'? styles.secondary: styles.ternary } onPress={()=> absorv(label,setEquation)}>
+            <Text style={Tvariant === 'default'? styles.texto: Tvariant ==='AC'? styles.texto_AC : styles.textoS  }>
                 {label}
             </Text>
         </TouchableOpacity>
